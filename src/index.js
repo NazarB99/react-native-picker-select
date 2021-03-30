@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Keyboard, Modal, Platform, Text, TextInput, TouchableOpacity, View } from 'react-native';
+import { Keyboard, Modal, Platform, Text, TextInput, TouchableOpacity, View, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
 import { Picker } from '@react-native-picker/picker';
@@ -396,6 +396,7 @@ export default class RNPickerSelect extends PureComponent {
 
         return (
             <View pointerEvents="box-only" style={containerStyle}>
+                <Image style={{width: 20, height: 20, borderRadius: 10}} source={{url: selectedItem.avatar}} />
                 <TextInput
                     testID="text_input"
                     style={[
