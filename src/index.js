@@ -396,7 +396,7 @@ export default class RNPickerSelect extends PureComponent {
 
         return (
             <View pointerEvents="box-only" style={containerStyle}>
-                <Image style={{width: 20, height: 20, borderRadius: 10}} source={{url: selectedItem.avatar}} />
+                <Image style={{width: 20, height: 20, borderRadius: 10}} source={{url: selectedItem.avatar || ''}} />
                 <TextInput
                     testID="text_input"
                     style={[
